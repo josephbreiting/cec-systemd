@@ -15,9 +15,11 @@ systemctl enable cec-poweroff
 
 TODO: hdmi port detection (edid-decode --physical-address /sys/class/drm/*/edid)
       for edid in $(ls /sys/class/drm/*/edid); do echo $edid; edid-decode $edid | grep 'Display Product Name' ; done
+TODO: dpms hooks for blanking, mabye watch /sys/class/drm/*/dpms state changes?
+
 TODO: osd port naming HDMI1=>HDMIPC
 TODO: /dev/cecX udev autoconfig for cec-ctl
 TODO: remote control passthrough button config
 
 WISH1: wake from cec
-WISH2: dpms hooks for blanking, mabye watch /sys/class/drm/*/dpms state changes?
+
