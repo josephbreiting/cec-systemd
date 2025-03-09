@@ -1,1 +1,9 @@
-[unit]
+[Unit]
+Description=Trigger cec-boot at boot
+
+[Timer]
+OnBootSec=1
+OnStartupSec=1
+
+[Install]
+WantedBy=timers.target
