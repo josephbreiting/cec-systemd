@@ -1,0 +1,11 @@
+[Unit]
+# Should be called as "pulse8-cec-attach@-dev-ttyACM0.service" or similar
+Description=Configure USB Pulse-Eight serial device at %I
+ConditionPathExists=%I
+
+[Service]
+Type=forking
+# inputattach is built without systemd daemon support by default, so systemd will have to guess the PID.
+# https://sourceforge.net/p/linuxconsole/code/ci/a3366c0d5f82485e6aae7b005ec7a2d9a93bf458/tree/utils/inputattach.c#l1233
+
+ExecStart=/usr/bin/inputattach --daemon --pulse8-cec %I
