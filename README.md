@@ -1,5 +1,4 @@
 HDMI-CEC services files for libcec (cec-client)
-
 Tested using Pulse-Eight HDMI-CEC USB adapter
 
 cec-boot.timer.....................Powers on cec device on at boot
