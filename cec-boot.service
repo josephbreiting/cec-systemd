@@ -3,5 +3,5 @@ Description=Set this device to the CEC Active Source
 
 [Service]
 Type=oneshot
-ExecStartPre=/bin/echo 'on 0' | /usr/bin/cec-client -s
-ExecStart=/bin/echo 'as' | /usr/bin/cec-client -s
+ExecStartPre=/usr/bin/bash -c '/bin/echo 'on 0' | /usr/bin/cec-client -s'
+ExecStart=/usr/bin/bash -c '/bin/echo 'as 0' | /usr/bin/cec-client -s'
