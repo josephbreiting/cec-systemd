@@ -1,1 +1,14 @@
-cec-suspend
+[Unit]
+Description=libcec sleep hook
+Before=sleep.target
+StopWhenUnneeded=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/bash -c '/bin/echo 'standby 0' | /usr/bin/cec-client -s'
+ExecStop=/usr/bin/bash - c '/bin/echo 'on 0' | /usr/bin/cec-client -s'
+ExecStopPost=/usr/bin/bash - c '/bin/echo 'as 0' | /usr/bin/cec-client -s'
+
+[Install]
+WantedBy=sleep.target
