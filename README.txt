@@ -13,8 +13,10 @@ systemctl enable cec-boot
 systemctl enable cec-suspend
 systemctl enable cec-poweroff
 
-WISH1: hdmi port detection
-WISH2: wake from cec
-WISH3: remote control passthrough
-WISH4: /dev/cecX udev autoconfig for cec-ctl
-WISH5: dpms hooks for blanking
+TODO: hdmi port detection (edid-decode --physical-address /sys/class/drm/*/edid)
+TODO: osd port naming HDMI1=>HDMIPC
+TODO: /dev/cecX udev autoconfig for cec-ctl
+TODO: remote control passthrough button config
+
+WISH1: wake from cec
+WISH2: dpms hooks for blanking, mabye watch /sys/class/drm/*/dpms state changes?
