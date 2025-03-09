@@ -1,5 +1,5 @@
 [Unit]
-Description=libcec sleep hook
+Description=CEC sleep hook
 Before=sleep.target
 StopWhenUnneeded=yes
 
